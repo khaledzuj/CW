@@ -1,6 +1,5 @@
-#this program search for a desierd gene from an input file (single file) the user can select a desierd parameter such as protien sequince length and specific amino acid numper inside the sequince
-# for runing this code use the formula  python 3 "file_location" minimum_length maximum_lingth minimum_cys_count max_cys_count
-
+#this program search for the desired gene from an input file (single file) the user can select the desired parameter such as protein sequence length and specific amino acid number inside the sequence
+# for running this code use the formula  python 3 "file_location" minimum_length maximum_lingth minimum_cys_count max_cys_count
 import sys
 file= (sys.argv[1])
 def translate_seq(data):
