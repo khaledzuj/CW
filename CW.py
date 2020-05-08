@@ -1,7 +1,7 @@
 #this program search for the desired gene from an input file (single file) the user can select the desired parameter such as protein sequence length and specific amino acid number inside the sequence
 # for running this code use the formula  python 3 "file_location" minimum_length maximum_lingth minimum_cys_count max_cys_count
 import sys
-file= (sys.argv[1])
+file= sys.argv[1]
 def translate_seq(data):
     """this function translates the nucleotides sequence in data file into amino acid"""
     # create a dictionary containing the nucleotides with their translated amino acid
