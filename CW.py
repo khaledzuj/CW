@@ -1,3 +1,6 @@
+#this program search for a desierd gene from an input file (single file) the user can select a desierd parameter such as protien sequince length and specific amino acid numper inside the sequince
+# for runing this code use the formula  python 3 "file_location" minimum_length maximum_lingth minimum_cys_count max_cys_count
+
 import sys
 file= (sys.argv[1])
 def translate_seq(data):
@@ -40,7 +43,7 @@ def blast_protien_seq(data,database_type,base):
     from Bio.Blast import NCBIWWW # import nesseary pakeges
     result_handle = NCBIWWW.qblast(database_type, base, str(data)) # this code used to blast the sequences
     blast_result = result_handle.read()
-    print(blast_result)
+    print (blast_result)
+    return blast_result
 
-
-blast_protien_seq(get_protien_seq(file,60,150,6,9),"blastp","nr")
+blast_protien_seq(get_protien_seq(file,int(sys.argv[2]),int(sys.argv[3]),int(sys.argv[4]),int(sys.argv[5])),"blastp","nr")
